@@ -26,9 +26,6 @@ function collect_milestones($milestone_regexp, $current_date, $milestone_list){
         }
         $start_date = convert_backlog_date($milestone['startDate'], TIMEZONE);
         $due_date = convert_backlog_date($milestone['releaseDueDate'], TIMEZONE);
-        echo 'target: ' . $milestone['name'] 
-            . ' from: ' . format_datetime($start_date) . ' to: ' . format_datetime($due_date)
-            . "\n";
         if($due_date < $current_date){
             echo 'past: ' . $milestone['name']
                 . ' from: ' . format_datetime($start_date) . ' to: ' . format_datetime($due_date)
