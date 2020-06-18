@@ -8,7 +8,7 @@ UTF-8 を利用している Linux 上で file_get_contents が利用できる標
 cURL は追加パッケージな事が多いのあえて利用していない。
 
 ## 準備
-Backlog API を利用するために必要な次の二つを src/etc/api_settings.php に記載する。
+Backlog API を利用するために必要な次の三つを src/etc/api_settings.php に記載する。
 * スペースのURL
      * https://{space_key}.backlog.jp
      * https://{space_key}.backlog.com
