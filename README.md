@@ -10,7 +10,7 @@ These scripts stand on a function "file-get-contents" instead cURL, because
 on some distributions, cURL library is divided from core PHP package.
 
 ## Preparation 
-Backlog API generally need two parameters below,
+Backlog API generally need three parameters below,
 * URL of space like;
      * https://{space_key}.backlog.jp
      * https://{space_key}.backlog.com
