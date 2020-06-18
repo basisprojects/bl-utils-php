@@ -1,0 +1,8 @@
+<?php
+// URL of your Backlog, for example, your.backlog.com or other.backlog.jp
+define('SPACE_URL', '');
+// API key that you can get your Personal Settings of Backlog
+define('API_KEY', '');
+// Timezone that you specified in Backlog
+define('SPACE_TIMEZONE', '');
+?>
