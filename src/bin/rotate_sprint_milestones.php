@@ -33,7 +33,7 @@ function collect_milestones($milestone_regexp, $current_date, $milestone_list){
             array_push($past_milestones, $milestone);
             continue;
         }
-        if($start_date <= $current_date && $current_date < $due_date->add(new DateInterval('P1D'))){
+        if($start_date <= $current_date && $current_date <= $due_date){
             if(is_null($current_milestone)){
                 echo 'current: ' . $milestone['name'] 
                     . ' from: ' . format_datetime($start_date) . ' to: ' . format_datetime($due_date)
@@ -101,6 +101,7 @@ function rotate_sprint_milestones($project_key, $milestone_regexp, $current_date
 $project_key = $argv[1]; # Project Key
 $milestone_regexp = $argv[2]; # Pattern of Milestones in RegExp
 
-$current_date = new DateTime();
+$current_date = new DateTime("now", new DateTimeZone(TIMEZONE));
+$current_date->setTime(0, 0);
 rotate_sprint_milestones($project_key, $milestone_regexp, $current_date);
 ?>
